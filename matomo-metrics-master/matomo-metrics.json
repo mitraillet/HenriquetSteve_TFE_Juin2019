@@ -1,0 +1,13 @@
+{
+  "database": {
+    "username": "",
+    "database": "",
+    "host": "",
+    "password": ""
+  },
+  "json": {
+    "device-types": "/etc/matomo-metrics/json-config/device-types.json",
+    "browsers": "/etc/matomo-metrics/json-config/browsers.json",
+    "os-families": "/etc/matomo-metrics/json-config/os-families.json"
+  }
+}

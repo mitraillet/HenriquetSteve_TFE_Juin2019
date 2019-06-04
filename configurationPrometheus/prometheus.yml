@@ -1,0 +1,11 @@
+---
+# my global config
+global:
+  scrape_interval:     1m # Set the scrape interval to every minute.
+  evaluation_interval: 1m # Evaluate rules every minute.
+  # scrape_timeout is set to the global default (10s).
+
+  - job_name: matomo
+  static_configs:
+    - targets:
+      - 172.16.40.124:9133

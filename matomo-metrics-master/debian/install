@@ -1,0 +1,2 @@
+matomo-metrics.json /etc/default
+json-config /etc/matomo-metrics

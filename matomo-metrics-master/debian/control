@@ -1,0 +1,11 @@
+Source: matomo-metrics
+Section: misc
+Priority: optional
+Maintainer: Steve Henriquet <she@escaux.com>
+Build-Depends: debhelper (>= 7), python-all-dev (>= 2.7), dh-python, python-setuptools, python-dev
+
+
+Package: matomo-metrics
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, escaux-python-lib (>= 1.0.0), escaux-python-monitoring-lib (>= 1.2.0), python-pkg-resources
+Description: Escaux matomo metrics Prometheus exporter

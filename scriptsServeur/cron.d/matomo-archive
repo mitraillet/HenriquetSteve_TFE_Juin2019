@@ -1,0 +1,2 @@
+MAILTO="she@escaux.com"
+5 * * * * /usr/bin/php7.2 /var/www/html/matomo/console core:archive --url=http://17448.sop.escaux.com/ > /home/escaux/matomo-archive.log

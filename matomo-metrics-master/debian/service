@@ -1,0 +1,12 @@
+[Unit]
+Description=Matomo metrics exporter
+
+[Service]
+Type=simple
+User=matomo-metrics
+ExecStart=/usr/bin/matomo-metrics --config=/etc/matomo-metrics.json
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+variables:
+  BASELINE_VERSION: 4
+
+include:
+  - project: 'ict/gitlab-ci-models'
+    file: '/buildd-multi-baseline.yml'

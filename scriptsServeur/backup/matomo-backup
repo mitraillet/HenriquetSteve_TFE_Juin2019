@@ -1,0 +1,46 @@
+#!/bin/bash
+
+export PATH=/bin:/usr/bin:/usr/local/bin
+
+LOG_PATH = '/var/log/MatomoBackupLog'
+
+tar -cvzf /escaux/etc/backuppc.d/matomo/ConfigFile.tar.gz /var/www/html/matomo/config
+
+if [ $? -eq 0 ]; then
+  echo "Backup successfully completed of Matomo's Config" >> LOG_PATH
+else
+  echo "Error found during backup of Matomo's Config" >> LOG_PATH
+fi
+
+tar -cvzf /escaux/etc/backuppc.d/matomo/Plugins.tar.gz /var/www/html/matomo/plugins
+
+if [ $? -eq 0 ]; then
+  echo "Backup successfully completed of Matomo's plugins" >> LOG_PATH
+else
+  echo "Error found during backup of Matomo's plugins" >> LOG_PATH
+fi
+
+tar -cvzf /escaux/etc/backuppc.d/matomo/Cron.tar.gz /etc/cron.d
+
+if [ $? -eq 0 ]; then
+  echo "Backup successfully completed of Cron" >> LOG_PATH
+else
+    echo "Error found during backup of Cron" >> LOG_PATH
+fi
+
+tar -cvzf /escaux/etc/backuppc.d/matomo/ScriptBackUp.tar.gz /backup
+
+if [ $? -eq 0 ]; then
+  echo "Backup successfully completed of Backup script" >> LOG_PATH
+else
+  echo "Error found during backup of backup script" >> LOG_PATH
+fi
+
+tar -cvzf /escaux/etc/backuppc.d/matomo/Nginx.tar.gz /etc/nginx
+
+if [ $? -eq 0 ]; then
+  echo "Backup successfully completed of nginx" >> LOG_PATH
+else
+  echo "Error found during backup of nginx" >> LOG_PATH
+fi
+
